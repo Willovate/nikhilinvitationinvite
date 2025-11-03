@@ -1532,6 +1532,85 @@
           font-size: 1.1rem;
         }
       }
+
+      .contact-footer {
+        background: rgba(255, 255, 255, 0.95);
+        padding: 1rem 0;
+        text-align: center;
+        border-top: 1px solid rgba(201, 169, 110, 0.2);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+      }
+
+      .made-by {
+        color: var(--dark);
+        font-size: 2.5rem;
+        margin-bottom: 0.8rem;
+      }
+
+      .made-by strong {
+        color: var(--primary);
+        font-weight: 600;
+      }
+
+      .contact-links {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+        padding: 0 1rem;
+      }
+
+      .contact-link {
+        color: var(--primary);
+        font-size: 3rem;
+        transition: transform 0.3s ease, color 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        text-decoration: none;
+      }
+
+      .contact-link i {
+        font-size: 1.2rem;
+      }
+
+      .contact-text {
+        color: var(--dark);
+        font-size: 2rem;
+      }
+
+      .contact-link:hover {
+        color: var(--secondary);
+        transform: translateY(-2px);
+      }
+
+      .contact-link:hover .contact-text {
+        color: var(--primary);
+      }
+
+      @media (max-width: 768px) {
+        .contact-footer {
+          padding: 0.8rem 0;
+        }
+        
+        .made-by {
+          font-size: 1.5rem;
+          margin-bottom: 0.6rem;
+        }
+        
+        .contact-links {
+          gap: 1rem;
+        }
+        
+        .contact-link {
+          font-size: 0.9rem;
+        }
+
+        .contact-text {
+          font-size: 1.5rem;
+        }
+      }
     </style>
   </head>
   <body>
@@ -1747,6 +1826,25 @@
         </div>
       </div>
     </footer>
+
+    <!-- Contact Footer -->
+    <div class="contact-footer">
+      <p class="made-by">Designed by <strong>Willovate Private Limited</strong></p>
+      <div class="contact-links">
+        <a href="tel:+919356603646" class="contact-link" aria-label="Call us">
+          <i class="fas fa-phone"></i>
+          <span class="contact-text">+91 935 660 3646</span>
+        </a>
+        <a href="https://www.willovate.in/" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="Visit our website">
+          <i class="fas fa-globe"></i>
+          <span class="contact-text">www.willovate.in</span>
+        </a>
+        <a href="https://www.instagram.com/willovate_" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="Follow us on Instagram">
+          <i class="fab fa-instagram"></i>
+          <span class="contact-text">@willovate_</span>
+        </a>
+      </div>
+    </div>
 
     <script>
       // Translations
@@ -2010,105 +2108,5 @@
         }
       });
     </script>
-
-    <!-- Contact Footer -->
-    <div class="contact-footer">
-      <p class="made-by">Designed by <strong>Willovate Private Limited</strong></p>
-      <div class="contact-links">
-        <a href="tel:+919356603646" class="contact-link" aria-label="Call us">
-          <i class="fas fa-phone"></i>
-          <span class="contact-text">+91 935 660 3646</span>
-        </a>
-        <a href="https://www.willovate.in/" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="Visit our website">
-          <i class="fas fa-globe"></i>
-          <span class="contact-text">www.willovate.in</span>
-        </a>
-        <a href="https://www.instagram.com/willovate_" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="Follow us on Instagram">
-          <i class="fab fa-instagram"></i>
-          <span class="contact-text">@willovate_</span>
-        </a>
-      </div>
-    </div>
-
-    <style>
-      .contact-footer {
-        background: rgba(255, 255, 255, 0.95);
-        padding: 1rem 0;
-        text-align: center;
-        border-top: 1px solid rgba(201, 169, 110, 0.2);
-        -webkit-backdrop-filter: blur(10px);
-        backdrop-filter: blur(10px);
-      }
-
-      .made-by {
-        color: var(--dark);
-        font-size: 2.5rem;
-        margin-bottom: 0.8rem;
-      }
-
-      .made-by strong {
-        color: var(--primary);
-        font-weight: 600;
-      }
-
-      .contact-links {
-        display: flex;
-        justify-content: center;
-        gap: 2rem;
-        flex-wrap: wrap;
-        padding: 0 1rem;
-      }
-
-      .contact-link {
-        color: var(--primary);
-        font-size: 3rem;
-        transition: transform 0.3s ease, color 0.3s ease;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        text-decoration: none;
-      }
-
-      .contact-link i {
-        font-size: 1.2rem;
-      }
-
-      .contact-text {
-        color: var(--dark);
-        font-size: 2rem;
-      }
-
-      .contact-link:hover {
-        color: var(--secondary);
-        transform: translateY(-2px);
-      }
-
-      .contact-link:hover .contact-text {
-        color: var(--primary);
-      }
-
-      @media (max-width: 768px) {
-        .contact-footer {
-          padding: 0.8rem 0;
-        }
-        
-        .made-by {
-          font-size: 1.5rem;
-          margin-bottom: 0.6rem;
-        }
-        
-        .contact-links {
-          gap: 1rem;
-        }
-        
-        .contact-link {
-          font-size: 0.9rem;
-        }
-
-        .contact-text {
-          font-size: 1.5rem;
-        }
-      }
-    </style>
   </body>
 </html>
