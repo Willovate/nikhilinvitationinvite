@@ -1031,20 +1031,22 @@
       .footer-image {
         text-align: center;
         padding: 0 20px;
+        margin-bottom: -60px;
       }
 
       .footer-image img {
-        max-width: 150px;
+        max-width: 180px;
         height: auto;
-        filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
-        transform: translateY(-30%);
-        opacity: 0.85;
+        filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.15));
+        transform: translateY(-40%);
+        opacity: 0.9;
         transition: all 0.3s ease;
       }
 
       .footer-image img:hover {
-        transform: translateY(-30%) scale(1.05);
+        transform: translateY(-40%) scale(1.05);
         opacity: 1;
+        filter: drop-shadow(0 6px 16px rgba(201, 169, 110, 0.25));
       }
 
       /* Footer */
@@ -1052,7 +1054,7 @@
         background: linear-gradient(135deg, var(--primary) 0%, #4a0a1a 100%);
         color: var(--light);
         text-align: center;
-        padding: 3rem;
+        padding: 6rem 0 4rem;
         position: relative;
         overflow: hidden;
         border-top: 2px solid var(--accent);
@@ -1076,44 +1078,83 @@
         position: relative;
         z-index: 1;
         background: rgba(0, 0, 0, 0.2);
-        padding: 2rem;
-        border-radius: 15px;
+        padding: 3rem;
+        border-radius: 20px;
         -webkit-backdrop-filter: blur(10px);
         backdrop-filter: blur(10px);
         border: 1px solid rgba(201, 169, 110, 0.1);
-        max-width: 600px;
-        margin: 0 auto;
+        max-width: 700px;
+        margin: 2rem auto 0;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      }
+
+      .footer-content::before {
+        content: "";
+        position: absolute;
+        top: -2px;
+        left: 10%;
+        right: 10%;
+        height: 2px;
+        background: linear-gradient(90deg, 
+          transparent 0%, 
+          var(--accent) 20%, 
+          var(--accent) 80%, 
+          transparent 100%
+        );
+        opacity: 0.3;
       }
 
       .om {
         color: var(--accent);
-        font-size: 1.8rem;
+        font-size: 2.2rem;
         display: inline-block;
-        margin: 1rem 0;
-        text-shadow: 0 0 10px rgba(230, 195, 126, 0.5);
+        margin: 1.5rem 0;
+        text-shadow: 0 0 15px rgba(230, 195, 126, 0.6);
       }
 
       .footer-heading {
-        font-size: 2rem;
-        margin-bottom: 1.5rem;
+        font-size: 2.4rem;
+        margin: 1rem 0 2rem;
         color: var(--accent);
         font-family: "Cinzel", serif;
-        letter-spacing: 2px;
+        letter-spacing: 3px;
         text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        padding-bottom: 1rem;
+        position: relative;
+      }
+
+      .footer-heading::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 2px;
+        background: var(--accent);
+        opacity: 0.4;
       }
 
       .footer-text {
-        font-size: 1.3rem;
-        margin-bottom: 1rem;
-        line-height: 1.5;
-        color: rgba(255, 245, 230, 0.9);
+        font-size: 1.5rem;
+        line-height: 2;
+        color: rgba(255, 245, 230, 0.95);
+        margin: 1.5rem 0;
       }
 
-      .footer-text-f{
+      .footer-text span {
+        display: block;
+        margin: 0.8rem 0;
+      }
+
+      .footer-text-f {
         font-size: 1.8rem;
-        margin-top: 1rem;
+        margin-top: 2rem;
         line-height: 1.7;
-        color: rgba(255, 245, 230, 0.9);
+        color: var(--accent);
+        font-family: "Cinzel", serif;
+        letter-spacing: 1px;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
       }
 
       .footer-copyright {
@@ -1422,9 +1463,6 @@
         .rsvp-form {
           padding: 3rem 2rem;
         }
-        .footer-text-f{
-          margin-top: 5rem;
-        }
       }
     </style>
   </head>
@@ -1629,12 +1667,14 @@
       </div>
       <div class="container">
         <div class="footer-content">
-          <p class="footer-heading" data-translate="footerHeading">
+          <h2 class="footer-heading" data-translate="footerHeading">
             सादर प्रणाम
-          </p>
+          </h2>
           <p class="footer-text">
-            <span data-translate="blessings">कृपया आपण सपरिवार पधारावे व वधू-वरास आशीर्वाद द्यावा</span><br>
-            <span class="footer-text-f" data-translate="families">जिभकाटे, राजगिरे आणि साठवणे परिवार</span>
+            <span data-translate="blessings">कृपया आपण सपरिवार पधारावे व वधू-वरास आशीर्वाद द्यावा</span>
+          </p>
+          <p class="footer-text-f" data-translate="families">
+            जिभकाटे, राजगिरे आणि साठवणे परिवार
           </p>
         </div>
       </div>
