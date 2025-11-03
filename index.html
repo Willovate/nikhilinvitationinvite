@@ -1049,34 +1049,64 @@
 
       /* Footer */
       footer {
-        background: var(--dark);
+        background: linear-gradient(135deg, var(--primary) 0%, #4a0a1a 100%);
         color: var(--light);
         text-align: center;
-        padding: 4rem 0;
+        padding: 3rem;
         position: relative;
         overflow: hidden;
+        border-top: 2px solid var(--accent);
+      }
+
+      footer::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="%23c9a96e" fill-opacity="0.03" d="M95 95L5 95L5 5L95 5L95 95Z M50 50L5 95L95 95L50 50Z"/></svg>');
+        background-size: 30px 30px;
+        opacity: 0.1;
+        pointer-events: none;
       }
 
       .footer-content {
         font-size: 1.3rem;
         position: relative;
         z-index: 1;
+        background: rgba(0, 0, 0, 0.2);
+        padding: 2rem;
+        border-radius: 15px;
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(201, 169, 110, 0.1);
+        max-width: 600px;
+        margin: 0 auto;
       }
 
-      .heart {
-        color: var(--primary);
-        animation: heartbeat 1.5s infinite;
+      .om {
+        color: var(--accent);
+        font-size: 1.8rem;
+        display: inline-block;
+        margin: 1rem 0;
+        text-shadow: 0 0 10px rgba(230, 195, 126, 0.5);
       }
 
       .footer-heading {
-        font-size: 1.5rem;
+        font-size: 2rem;
         margin-bottom: 1.5rem;
         color: var(--accent);
+        font-family: "Cinzel", serif;
+        letter-spacing: 2px;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
       }
 
       .footer-text {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
         margin-bottom: 1rem;
+        line-height: 1.8;
+        color: rgba(255, 245, 230, 0.9);
       }
 
       .footer-copyright {
@@ -1590,12 +1620,12 @@
       <div class="container">
         <div class="footer-content">
           <p class="footer-heading" data-translate="footerHeading">
-            Looking forward to celebrating with you!
+            सादर प्रणाम
           </p>
           <p class="footer-text">
-            <span data-translate="madeWith">Made with</span>
-            <span class="heart">❤️</span>
-            <span data-translate="for">for</span> Nikhil & Vaishnavi
+            <span data-translate="blessings">कृपया आपण सपरिवार पधारावे व वधू-वरास आशीर्वाद द्यावा</span><br>
+            <span data-translate="hosts">स्नेहाधीन</span><br>
+            <span data-translate="families">जिभकाटे, राजगिरे आणि साठवणे परिवार</span>
           </p>
         </div>
       </div>
@@ -1613,10 +1643,10 @@
           daughterOf: "Daughter",
           groomParents:
             "Son of Smt. Pushpalata &<br />Shri. Rajesh Ramdas Ji Jibhkate",
-          groomCity: "Sakoli, District Bhandara",
+          groomCity: "Sakoli, Bhandara",
           brideName: "Vaishnavi Rajgire",
           brideParents: "Daughter of Smt. Shrutika &<br />Shri. Bhaskar Ji Rajgire",
-          brideCity: "Vadsa, District Gadchiroli",
+          brideCity: "Vadsa, Gadchiroli",
           welcomeFrom: "Warm Welcome From",
           host1: "Shri. Sanjay Maroti Sathwane",
           host2: "Smt. Rupali Sanjay Sathwane",
@@ -1637,9 +1667,10 @@
           venueAddress:
             "Ekodi Road, Sakoli<br />District Bhandara, Maharashtra",
           getDirections: "Get Directions",
-          footerHeading: "Looking forward to celebrating with you!",
-          madeWith: "Made with",
-          for: "for",
+          footerHeading: "Pranaam",
+          blessings: "You are cordially invited to grace the wedding ceremony with your family and bless the bride and groom.",
+          hosts: "With warm regards",
+          families: "Jibhkate, Rajgire & Sathwane Family",
           allRights: "All Rights Reserved",
           days: "Days",
           hours: "Hours",
@@ -1654,10 +1685,10 @@
           theCouple: "वर-वधू",
           daughterOf: "यांची सुकन्या",
           groomParents: "सौ. पुष्पलता व<br />श्री. राजेश रामदास जी जिभकाटे यांचे चिरंजीव",
-          groomCity: "साकोली, जिल्हा भंडारा",
+          groomCity: "साकोली, भंडारा",
           brideName: "वैष्णवी राजगिरे",
           brideParents: "सौ. श्रुतिका व<br />श्री. भास्कर जी राजगिरे यांची सुकन्या",
-          brideCity: "वडसा, जिल्हा गडचिरोली",
+          brideCity: "वडसा, गडचिरोली",
           welcomeFrom: "शुभेच्छुक",
           host1: "श्री. संजय मारोती साठवणे",
           host2: "सौ. रुपाली संजय साठवणे",
@@ -1677,9 +1708,10 @@
           weddingVenue: "विवाह मंडप",
           venueAddress: "एकोडी रोड, साकोली<br />जिल्हा भंडारा, महाराष्ट्र",
           getDirections: "मार्ग दर्शन",
-          footerHeading: "आपल्या उपस्थितीची अपेक्षा आहे!",
-          madeWith: "प्रेमाने बनवलेले",
-          for: "साठी",
+          footerHeading: "सादर प्रणाम",
+          blessings: "आपण सपरिवार पधारून वधू-वरांना आशीर्वाद देऊन विवाह सोहळ्याची शोभा वाढवावी ही विनंती",
+          hosts: "स्नेहाधीन",
+          families: "जिभकाटे, राजगिरे आणि साठवणे परिवार",
           allRights: "सर्व हक्क राखीव",
           days: "दिवस",
           hours: "तास",
